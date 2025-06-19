@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Landing Framo</title>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: 'Suisse Int';
+      src: url('fonts/suisseintl.woff2') format('woff2'),
+        url('fonts/suisseintl.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      font-family: 'Suisse Int';
+    }
+    .answer {
+      display: none;
+    }
+
+    .rotate-180 path {
+      stroke: purple;
+    }
+  </style>
+  <body class="bg-black text-white">
+    <div class="block1 h-screen relative">
+      <img
+        class="absolute top-0 object-cover w-full h-full"
+        src="images/bg-framo.png"
+        alt="" />
+
+      <div class="relative container mx-auto px-3 md:px-[40px] py-[32px] z-50">
+        <div class="w-full flex items-center justify-between">
+          <a href="">
+            <img src="images/framo-logo.svg" alt="" />
+          </a>
+
+          <a
+            href=""
+            class="px-[12px] py-[10px] rounded-[20px] bg-[rgba(51,56,58,0.25)] text-white flex items-center gap-2"
+            style="
+              box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
+                0px 8px 4px 6px rgba(0, 0, 0, 0.05),
+                inset 0px -1px 1px rgba(255, 255, 255, 0.25);
+            ">
+            <img src="images/tv.svg" alt="" />
+            <p>Watch Framo TV</p>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="px-3 md:px-0 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 gap-5 w-full">
+        <p class="text-6xl md:text-[128px] font-semibold">Framo</p>
+        <p class="text-xl md:text-[32px] w-full text-center">
+          The new way creators bring stories to life.
+        </p>
+        <div class="flex flex-col md:flex-row gap-5">
+          <a
+            class="px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]"
+            href=""
+            >Join Waitlist</a
+          ><a
+            class="px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]"
+            href="/signup"
+            >Join via Code</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="block2 py-14 px-3 md:px-0">
+      <div class="flex flex-col items-center justify-center">
+        <p class="text-2xl md:text-[48px] text-center md:w-1/2">
+          You don’t need to learn editing. You just need to have something to
+          say.
+        </p>
+
+        <p class="text-xl text-center md:text-[20px] text-[#D1D1D1] mt-[24px]">
+          Framo is the agentic AI editor built for creators and storytellers.
+        </p>
+      </div>
+    </div>
+
+    <div class="block3 h-screen relative">
+      <img
+        class="absolute top-0 w-full h-full"
+        src="images/bg-block-with-video.png" />
+      <div
+        class="flex flex-col items-center justify-center px-3 w-full md:w-[70%] md:h-auto h-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div
+          class="cursor-pointer open-play w-full h-full border border-transparent hover:border-2 hover:border-[#5A0AA8] rounded-xl transition-all duration-300">
+          <video
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-cover rounded-xl">
+            <source class="h-full" src="images/bg.mp4" type="video/mp4" />
+          </video>
+
+          <div
+            class="cursor-pointer absolute bottom-5 right-5 flex items-center justify-center rounded-full py-5 h-14 w-14 bg-[#5A0AA8]">
+            <img
+              class="w-7 ml-1"
+              src="images/play-button-arrowhead.svg"
+              alt="" />
+          </div>
+        </div>
+
+        <div
+          class="popup bg-black/80 flex items-center justify-center backdrop-blur-lg fixed top-0 h-screen w-full z-9999 hidden">
+          <iframe
+            class="w-full md:w-1/2 h-1/2 px-3.5"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/cWeEFqy-OR8?si=_Ff1MXV7YjNJm3Pn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+
+          <img
+            class="close-btn w-10 absolute top-10 right-10 cursor-pointer"
+            src="images/close.svg"
+            alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="block4 pt-[24px] pb-[175px] flex items-center justify-center px-3">
+      <div class="flex flex-col w-full md:w-[70%]">
+        <p class="w-full text-center text-[75px]">FAQ</p>
+
+        <div class="acc w-full mt-[40px]">
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">What is Framo?</p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Framo is an AI-powered video editing agent that automatically
+                creates compelling short-form video content by deeply
+                understanding your video visually. Just describe what you want
+                in natural language, and Framo does the editing for you.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                How does Framo differ from traditional video editors?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Unlike traditional video editors that require manual timeline
+                adjustments, Framo uses advanced Vision-Language Models (VLM)
+                along with its proprietary model trained specifically on video
+                data. This unique combination enables Framo to intelligently
+                identify key moments and highlight-worthy scenes purely based on
+                visual content, significantly streamlining the editing process.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                Do I need video editing experience to use Framo?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                No experience is necessary! Framo is designed for creators of
+                all skill levels. Simply describe your desired outcome, and the
+                AI handles the rest.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                What kinds of videos can Framo handle?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Framo is optimized for short-form videos used on platforms like
+                TikTok, Instagram Reels, YouTube Shorts, and more, making it
+                ideal for creators, marketers, gamers, streamers, and vloggers.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                Can I manually adjust edits made by Framo?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Yes! Framo provides an optional "Editor Mode" where you can
+                review, refine, and manually adjust edits while still
+                interacting naturally with the AI assistant.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                How fast can Framo produce edited videos?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Framo can process and generate engaging edits in minutes, making
+                it significantly faster than manual video editing and ideal for
+                quick content turnarounds.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="cursor-pointer question flex py-[32px] justify-between border-b border-[rgba(156,163,175,0.32)]">
+              <p class="text-xl leading-[32px] w-full">
+                Is my video content secure with Framo?
+              </p>
+
+              <svg
+                class="arrow-question"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="32"
+                  height="32"
+                  rx="16"
+                  fill="#F7F8FA"
+                  fill-opacity="0.13" />
+                <path
+                  d="M10 14L16 20L22 14"
+                  stroke="#555A65"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="answer">
+              <p class="text-[#9AA0A6] py-[16px]">
+                Absolutely. Your videos are processed securely, ensuring
+                complete privacy and confidentiality. You retain full control
+                and ownership of all uploaded content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
