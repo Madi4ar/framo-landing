@@ -26,12 +26,90 @@
       stroke: purple;
     }
   </style>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white relative">
+    <div
+      class="hidden waitlist bg-[rgba(0,0,0,0.9)] w-full h-full fixed z-9999 flex items-center justify-center px-3">
+      <div
+        class="w-full relative md:w-1/2 flex flex-col items-center border border-gray-500 rounded-xl py-5 px-10">
+        <h1 class="text-2xl font-bold">Join Waitlist</h1>
+        <p class="font-light text-center">
+          Be the first to access exclusive features by joining our waitlist.
+          <br />
+          We’ll notify you as soon as we launch!
+        </p>
+
+        <button class="close-waitlist absolute right-5 top-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-white hover:text-gray-500 cursor-pointer transition"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <form
+          id="waitlistForm"
+          class="space-y-4 mt-5 flex flex-col items-center justify-center w-full">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your name"
+            class="w-full p-3 rounded-lg border border-gray-500 bg-transparent text-white placeholder-gray-400 outline-none" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your email"
+            class="w-full p-3 rounded-lg border border-gray-500 bg-transparent text-white placeholder-gray-400 outline-none" />
+          <input
+            type="text"
+            id="field"
+            name="field"
+            required
+            placeholder="Write something..."
+            class="w-full p-3 rounded-lg border border-gray-500 bg-transparent text-white placeholder-gray-400 outline-none" />
+          <button
+            type="submit"
+            class="w-full px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]">
+            Send
+          </button>
+        </form>
+
+        <p id="message" class="text-sm mt-4 text-center text-green-400 hidden">
+          ✅ Thank you! You're on the list.
+        </p>
+        <p id="error" class="text-sm mt-4 text-center text-red-400 hidden">
+          ❌ Something went wrong. Try again later.
+        </p>
+      </div>
+    </div>
     <div class="block1 h-screen relative">
-      <img
+      <!-- <img
         class="absolute top-0 object-cover w-full h-full"
         src="images/bg-framo.png"
-        alt="" />
+        alt="" /> -->
+
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+        <source src="images/ background-video-framo.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+
+      <div
+        class="absolute bottom-0 left-0 w-full h-full z-0 pointer-events-none bg-gradient-to-b from-black/5 via-black/10 to-black/100"></div>
 
       <div class="relative container mx-auto px-3 md:px-[40px] py-[32px] z-50">
         <div class="w-full flex items-center justify-between">
@@ -61,8 +139,8 @@
         </p>
         <div class="flex flex-col md:flex-row gap-5">
           <a
-            class="px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]"
-            href=""
+            class="join-waitlist px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]"
+            href="javascript:void(0)"
             >Join Waitlist</a
           ><a
             class="px-[24px] py-[10px] rounded-[30px] bg-[rgba(51,56,58,0.25)] backdrop-blur-[50px] shadow-[inset_0px_-1px_1px_rgba(255,255,255,0.25),0px_8px_4px_6px_rgba(0,0,0,0.05),inset_0px_1px_1px_rgba(255,255,255,0.25)]"
@@ -112,7 +190,7 @@
         </div>
 
         <div
-          class="popup bg-black/80 flex items-center justify-center backdrop-blur-lg fixed top-0 h-screen w-full z-9999 hidden">
+          class="!hidden popup bg-black/80 flex items-center justify-center backdrop-blur-lg fixed top-0 h-screen w-full z-9999 hidden">
           <iframe
             class="w-full md:w-1/2 h-1/2 px-3.5"
             width="560"
