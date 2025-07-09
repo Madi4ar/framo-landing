@@ -26,14 +26,18 @@ questions.forEach((question) => {
   });
 });
 
+const popup = document.querySelector('.popup');
+const iframe = document.querySelector('iframe');
+const originalSrc = iframe.src;
+
 document.querySelector('.open-play').onclick = function () {
-  document.querySelector('.popup').classList.remove('hidden');
+  iframe.src = originalSrc;
+  popup.classList.remove('hidden');
 };
 
 document.querySelector('.close-btn').onclick = function () {
-  const iframe = document.querySelector('iframe');
-  iframe.src = iframe.src;
-  document.querySelector('.popup').classList.add('hidden');
+  iframe.src = '';
+  popup.classList.add('hidden');
 };
 
 document.querySelector('.join-waitlist').onclick = function () {

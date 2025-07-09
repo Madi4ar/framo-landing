@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/favicon.ico?v=2" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Framo.ai</title>
+    <title>Landing Framo</title>
   </head>
 
   <style>
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <div class="block3 h-screen relative">
+    <div class="block3 h-screen relative w-full">
       <img
         class="absolute top-0 w-full h-full"
         src="images/bg-block-with-video.png" />
@@ -173,13 +173,18 @@
         class="flex flex-col items-center justify-center px-3 w-full md:w-[70%] md:h-auto h-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <div
           class="cursor-pointer open-play w-full h-full border border-transparent hover:border-2 hover:border-[#5A0AA8] rounded-xl transition-all duration-300">
-          <video
+          <!-- <video
             autoplay
             muted
             loop
             class="w-full h-full object-cover rounded-xl">
             <source class="h-full" src="images/bg.mp4" type="video/mp4" />
-          </video>
+          </video> -->
+
+          <img
+            src="images/bg-framo-video.png"
+            class="w-full h-full object-cover rounded-xl"
+            alt="" />
 
           <div
             class="cursor-pointer absolute bottom-5 right-5 flex items-center justify-center rounded-full py-5 h-14 w-14 bg-[#5A0AA8]">
@@ -189,25 +194,23 @@
               alt="" />
           </div>
         </div>
+      </div>
 
-        <div
-          class="!hidden popup bg-black/80 flex items-center justify-center backdrop-blur-lg fixed top-0 h-screen w-full z-9999 hidden">
-          <iframe
-            class="w-full md:w-1/2 h-1/2 px-3.5"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/cWeEFqy-OR8?si=_Ff1MXV7YjNJm3Pn"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
+      <div
+        class="hidden popup bg-black/80 flex items-center justify-center backdrop-blur-lg fixed top-0 h-screen w-full z-9999 hidden">
+        <iframe
+          class="w-full md:w-1/2 h-1/2 px-3.5"
+          width="560"
+          height="315"
+          src="https://s3.bizdin.ai/framo/static/render%204.mp4"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
 
-          <img
-            class="close-btn w-10 absolute top-10 right-10 cursor-pointer"
-            src="images/close.svg"
-            alt="" />
-        </div>
+        <img
+          class="close-btn w-10 absolute top-10 right-10 cursor-pointer"
+          src="images/close.svg"
+          alt="" />
       </div>
     </div>
 
